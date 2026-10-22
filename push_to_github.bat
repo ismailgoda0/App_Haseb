@@ -1,79 +1,51 @@
 @echo off
-chcp 65001 >nul
 title HomeCash - Push to GitHub
 
 echo ======================================================
-echo          HomeCash - رفع التحديثات إلى GitHub
+echo           HomeCash - Push to GitHub
 echo ======================================================
 echo.
 
 where git >nul 2>nul
-if errorlevel 1 goto NO_GIT
+if %errorlevel% neq 0 (
+    echo [ERROR] Git is not installed or not in your PATH.
+    echo Please install Git from: https://git-scm.com/
+    goto PAUSE_END
+)
 
-if not exist ".git" goto INIT_GIT
-goto CHECK_REMOTE
-
-:INIT_GIT
-echo [*] Initializing local git repository...
-git init
-git branch -M main
-
-:CHECK_REMOTE
-set REPO_URL=https://github.com/ismailgoda0/App_Haseb.git
-
-git remote get-url origin >nul 2>nul
-if errorlevel 1 goto ADD_REMOTE
-
-git remote set-url origin %REPO_URL%
-goto STAGE_FILES
-
-:ADD_REMOTE
-echo [*] Setting remote origin to %REPO_URL%
-git remote add origin %REPO_URL%
-
-:STAGE_FILES
-git branch -M main
-echo [*] تتبع الملفات الجديدة والمعدلة (git add .)...
+echo [*] Staging changed files (git add .)...
 git add .
 
 echo.
-set COMMIT_MSG=
-set /p COMMIT_MSG="اكتب وصف التعديل (أو اضغط Enter لرسالة تلقائية): "
-if "%COMMIT_MSG%"=="" set COMMIT_MSG=Update HomeCash project
+set "COMMIT_MSG="
+set /p COMMIT_MSG="Enter commit message (Press Enter for auto timestamp): "
+if not defined COMMIT_MSG (
+    set "COMMIT_MSG=Update HomeCash project"
+)
 
-echo [*] جاري حفظ التعديل (git commit)...
+echo [*] Committing changes...
 git commit -m "%COMMIT_MSG%"
 
 echo.
-echo [*] جاري سحب أي تحديثات جديدة من GitHub قبل الرفع...
+echo [*] Syncing with remote repository...
 git pull origin main --no-rebase --no-edit >nul 2>nul
 
-echo.
-echo [*] جاري الرفع إلى GitHub (origin main)...
+echo [*] Pushing to GitHub (origin main)...
 git push origin main
 
-if errorlevel 1 goto PUSH_FAILED
+if %errorlevel% equ 0 (
+    echo.
+    echo ======================================================
+    echo          SUCCESS: Uploaded to GitHub!
+    echo   https://github.com/ismailgoda0/App_Haseb
+    echo ======================================================
+) else (
+    echo.
+    echo ======================================================
+    echo [WARNING] Push failed. Check your internet connection.
+    echo ======================================================
+)
 
-echo.
-echo ======================================================
-echo          تم رفع المشروع بنجاح إلى GitHub!
-echo   https://github.com/ismailgoda0/App_Haseb
-echo ======================================================
-goto END
-
-:PUSH_FAILED
-echo.
-echo ======================================================
-echo [تنبيه] حدث خطأ أثناء الرفع!
-echo تأكد من اتصال الإنترنت وصلاحيات حسابك على GitHub.
-echo ======================================================
-goto END
-
-:NO_GIT
-echo [خطأ] بروتوكول Git غير مثبت على جهازك أو غير مضاف إلى PATH.
-echo يرجى تحميله من: https://git-scm.com/
-goto END
-
-:END
+:PAUSE_END
 echo.
 pause

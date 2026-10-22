@@ -1,0 +1,149 @@
+<!DOCTYPE html><html class="h-full" dir="rtl" lang="ar" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>مطابقة الرصيد - دفتر المحافظ</title>
+<!-- Google Fonts: IBM Plex Sans Arabic -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error": "#ffffff",
+            "surface-container": "#ececff",
+            "on-error-container": "#93000a",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#bbc3ff",
+            "inverse-surface": "#2c2f41",
+            "tertiary": "#50586e",
+            "on-background": "#181a2c",
+            "primary-fixed-dim": "#bbc3ff",
+            "on-tertiary": "#ffffff",
+            "on-secondary-container": "#606470",
+            "on-primary": "#ffffff",
+            "surface": "#fbf8ff",
+            "on-secondary-fixed": "#171c25",
+            "on-tertiary-fixed": "#131b2e",
+            "primary-fixed": "#dfe0ff",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "inverse-on-surface": "#f0efff",
+            "surface-variant": "#dfe1f9",
+            "secondary": "#5a5e6a",
+            "primary-container": "#4f63e8",
+            "error-container": "#ffdad6",
+            "secondary-container": "#dfe2f0",
+            "outline-variant": "#c5c5d7",
+            "surface-dim": "#d7d8f0",
+            "secondary-fixed": "#dfe2f0",
+            "on-secondary": "#ffffff",
+            "on-primary-container": "#f7f5ff",
+            "surface-bright": "#fbf8ff",
+            "primary": "#3348ce",
+            "surface-container-low": "#f4f2ff",
+            "on-secondary-fixed-variant": "#424752",
+            "on-primary-fixed": "#000d60",
+            "surface-container-high": "#e5e6ff",
+            "on-surface": "#181a2c",
+            "background": "#fbf8ff",
+            "on-tertiary-container": "#f5f5ff",
+            "on-surface-variant": "#454654",
+            "tertiary-fixed-dim": "#bfc6e0",
+            "tertiary-container": "#697087",
+            "surface-tint": "#3a4fd4",
+            "surface-container-highest": "#dfe1f9",
+            "outline": "#757686",
+            "error": "#ba1a1a",
+            "secondary-fixed-dim": "#c3c6d3",
+            "on-primary-fixed-variant": "#1b33bc",
+            "tertiary-fixed": "#dbe2fd"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.25rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter-mobile": "0.75rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "margin": "1.25rem"
+          },
+          fontFamily: {
+            "display-lg": ["IBM Plex Sans Arabic", "IBM Plex Sans", "sans-serif"],
+            "body-lg": ["IBM Plex Sans Arabic", "IBM Plex Sans", "sans-serif"],
+            "headline-md": ["IBM Plex Sans Arabic", "IBM Plex Sans", "sans-serif"],
+            "body-md": ["IBM Plex Sans Arabic", "IBM Plex Sans", "sans-serif"],
+            "label-numeric": ["IBM Plex Sans Arabic", "IBM Plex Sans", "sans-serif"],
+            "display-lg-mobile": ["IBM Plex Sans Arabic", "IBM Plex Sans", "sans-serif"],
+            "caption": ["IBM Plex Sans Arabic", "IBM Plex Sans", "sans-serif"],
+            "headline-sm": ["IBM Plex Sans Arabic", "IBM Plex Sans", "sans-serif"],
+            "body-sm": ["IBM Plex Sans Arabic", "IBM Plex Sans", "sans-serif"]
+          },
+          fontSize: {
+            "display-lg": ["34px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "500" }],
+            "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "600" }],
+            "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }],
+            "label-numeric": ["15px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "600" }],
+            "display-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "caption": ["11px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }],
+            "headline-sm": ["18px", { lineHeight: "26px", letterSpacing: "0em", fontWeight: "600" }],
+            "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    body {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .font-num {
+      font-variant-numeric: tabular-nums;
+      direction: ltr;
+      display: inline-block;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col selection:bg-primary-fixed selection:text-primary">
+<!-- Mobile Screen Shell Container (390dp baseline) -->
+<div class="w-full mx-auto bg-surface min-h-screen flex flex-col relative pb-32 px-4 sm:px-6 md:px-8 py-6 max-w-7xl">
+<!-- 1. Top App Bar -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md pb-4 pt-2 mb-4"><div class="flex items-center justify-between gap-3"><div class="flex items-center gap-3"><button aria-label="الرجوع" class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all shadow-[0_2px_8px_-2px_rgba(79,99,232,0.08)]" type="button"><span class="material-symbols-outlined text-[22px]">arrow_forward</span></button><div><h1 class="text-headline-sm font-headline-sm text-on-surface font-bold tracking-tight">مطابقة الرصيد</h1><p class="text-body-sm font-body-sm text-secondary">فحص الفروقات بين الدفتر ورسائل المحافظ</p></div></div><button aria-label="السجل" class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary hover:bg-surface-container active:scale-95 transition-all shadow-[0_2px_8px_-2px_rgba(79,99,232,0.08)]" type="button"><span class="material-symbols-outlined text-[20px]">history</span></button></div></header>
+<!-- Main Content Canvas -->
+<main class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start"><!-- Column 1: Summary Comparison Card & Explanatory insight --><div class="flex flex-col gap-4"><section aria-label="بطاقة مطابقة الرصيد" class="bg-surface-container-lowest rounded-2xl p-4 sm:p-5 shadow-[0_4px_24px_-4px_rgba(79,99,232,0.06)] border border-outline-variant/30 relative overflow-hidden"><div class="flex items-center justify-between pb-3.5 mb-3 border-b border-outline-variant/30"><div class="flex items-center gap-2.5"><div class="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[22px]">sim_card</span></div><div><h2 class="text-body-lg font-body-lg font-bold text-on-surface leading-tight">رصيد فودافون كاش لا يطابق آخر رسالة</h2><p class="text-caption font-caption text-secondary font-mono tracking-wider mt-0.5">شريحة 1 · 01023455842</p></div></div><span class="text-caption font-caption bg-amber-100/90 text-amber-900 px-2.5 py-1 rounded-full font-bold shrink-0 border border-amber-300/60 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>تنبيه فارق</span></div><!-- 3-row Comparison Table --><div class="bg-surface-container-low rounded-xl p-3.5 flex flex-col gap-2.5"><div class="flex justify-between items-center text-body-md font-body-md"><span class="text-secondary">الرصيد في الدفتر</span><span class="text-on-surface font-label-numeric font-num font-semibold">13,250.00 ج.م</span></div><div class="flex justify-between items-center text-body-md font-body-md"><span class="text-secondary">الرصيد في الرسالة</span><span class="text-on-surface font-label-numeric font-num font-semibold">14,250.00 ج.م</span></div><div class="h-px bg-outline-variant/30 my-0.5"></div><div class="flex justify-between items-center bg-amber-50 rounded-lg p-2.5 border border-amber-300/60"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-amber-600 text-[20px]">warning</span><span class="text-body-md font-body-md font-bold text-amber-900">الفرق</span></div><div class="flex items-center gap-2"><span class="text-headline-sm font-headline-sm text-amber-900 font-num font-bold">1,000.00 ج.م</span><span class="text-caption font-caption bg-amber-200/70 text-amber-900 px-2 py-0.5 rounded-full font-bold">ناقص</span></div></div></div><p class="text-caption font-caption text-secondary mt-3 flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[18px]">info</span><span>يبدو أن رسالة أو عملية لم تُسجَّل.</span></p></section></div><!-- Column 2: Resolution Options & Settled History --><div class="flex flex-col gap-6"><section aria-label="كيف نحل الفرق؟"><div class="flex items-center justify-between mb-3 px-0.5"><h3 class="text-body-lg font-body-lg font-bold text-on-surface">كيف نحل الفرق؟</h3><span class="text-caption font-caption text-secondary">اختر الإجراء المناسب</span></div><div class="flex flex-col gap-2.5"><!-- Option 1: Selected by default --><label class="w-full text-right bg-surface-container-lowest rounded-2xl p-3.5 shadow-sm border-2 border-primary bg-primary-fixed/30 cursor-pointer flex items-center justify-between transition-all"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">sms</span></div><div><div class="text-body-md font-body-md font-bold text-primary">استيراد رسالة مفقودة</div><p class="text-body-sm font-body-sm text-secondary mt-0.5">ابحث عن الرسالة في هاتفك وأضفها</p></div></div><div class="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-primary shrink-0"><div class="w-2 h-2 rounded-full bg-surface-container-lowest"></div></div></label><!-- Option 2 --><label class="w-full text-right bg-surface-container-lowest rounded-2xl p-3.5 shadow-sm border border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-low cursor-pointer flex items-center justify-between transition-all"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div><div class="text-body-md font-body-md font-bold text-on-surface">تسجيله كعملية أخرى</div><p class="text-body-sm font-body-sm text-secondary mt-0.5">مثل شحن أو فاتورة، مع اختيار الفئة</p></div></div><div class="w-5 h-5 rounded-full border-2 border-outline-variant shrink-0"></div></label><!-- Option 3 --><label class="w-full text-right bg-surface-container-lowest rounded-2xl p-3.5 shadow-sm border border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-low cursor-pointer flex items-center justify-between transition-all"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-secondary shrink-0"><span class="material-symbols-outlined text-[20px]">visibility_off</span></div><div><div class="text-body-md font-body-md font-bold text-on-surface">تجاهل الفرق</div><p class="text-body-sm font-body-sm text-secondary mt-0.5">لن نظهر هذا التنبيه مرة أخرى لهذه الفترة</p></div></div><div class="w-5 h-5 rounded-full border-2 border-outline-variant shrink-0"></div></label></div></section><!-- Settled differences history --><section aria-label="فروق تمت تسويتها"><div class="flex items-center justify-between mb-3 px-0.5"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-[20px]">check_circle</span><h3 class="text-body-lg font-body-lg font-bold text-on-surface">فروق تمت تسويتها</h3></div><span class="text-caption font-caption bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full">2 مسوّاة</span></div><div class="flex flex-col gap-2.5"><!-- Row 1 --><div class="bg-surface-container-lowest rounded-2xl p-3.5 shadow-sm border border-outline-variant/30"><div class="flex items-center justify-between mb-1.5"><span class="text-caption font-caption text-secondary">الأمس 04:15 م · إي آند كاش (01145678910)</span><span class="text-body-sm font-body-sm font-bold text-on-surface font-num">50.00 ج.م</span></div><div class="flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface-variant"><span class="text-emerald-600 font-semibold">تم الحل:</span><span>تسوية كرسوم باقة إنترنت ومكالمات</span></div></div><!-- Row 2 --><div class="bg-surface-container-lowest rounded-2xl p-3.5 shadow-sm border border-outline-variant/30"><div class="flex items-center justify-between mb-1.5"><span class="text-caption font-caption text-secondary">منذ 3 أيام · فودافون كاش (01023455842)</span><span class="text-body-sm font-body-sm font-bold text-on-surface font-num">500.00 ج.م</span></div><div class="flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface-variant"><span class="text-emerald-600 font-semibold">تم الحل:</span><span>استيراد رسالة مؤجلة تلقائياً</span></div></div></div></section></div></main>
+<!-- 5. Fixed Full-Width Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 right-0 mx-auto px-4 sm:px-6 md:px-8 py-4 bg-surface/95 backdrop-blur-md z-30 max-w-7xl">
+<button class="w-full h-[52px] bg-primary hover:bg-primary-container text-on-primary font-body-lg font-bold rounded-2xl flex items-center justify-center gap-2 shadow-[0_8px_20px_-4px_rgba(79,99,232,0.35)] active:scale-[0.98] transition-all" type="button"><span class="material-symbols-outlined text-[20px]">task_alt</span><span>تطبيق الحل</span></button>
+</div>
+</div>
+</body></html>

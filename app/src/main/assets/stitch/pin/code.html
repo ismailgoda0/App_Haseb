@@ -1,0 +1,220 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>HomeCash - قفل الأمان</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "surface-container-high": "#e5e6ff",
+              "primary-fixed-dim": "#bbc3ff",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#dfe2f0",
+              "primary-container": "#4f63e8",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#bbc3ff",
+              "tertiary-container": "#697087",
+              "inverse-on-surface": "#f0efff",
+              "surface": "#fbf8ff",
+              "on-secondary-fixed-variant": "#424752",
+              "secondary": "#5a5e6a",
+              "surface-container-highest": "#dfe1f9",
+              "on-secondary-container": "#606470",
+              "primary-fixed": "#dfe0ff",
+              "on-tertiary-fixed": "#131b2e",
+              "error": "#ba1a1a",
+              "on-primary-fixed": "#000d60",
+              "tertiary-fixed": "#dbe2fd",
+              "on-secondary-fixed": "#171c25",
+              "primary": "#3348ce",
+              "on-surface": "#181a2c",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#c3c6d3",
+              "on-error-container": "#93000a",
+              "surface-dim": "#d7d8f0",
+              "secondary-container": "#dfe2f0",
+              "on-tertiary-fixed-variant": "#3f465c",
+              "outline-variant": "#c5c5d7",
+              "on-tertiary-container": "#f5f5ff",
+              "inverse-surface": "#2c2f41",
+              "surface-tint": "#3a4fd4",
+              "on-background": "#181a2c",
+              "surface-bright": "#fbf8ff",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#1b33bc",
+              "on-primary": "#ffffff",
+              "surface-variant": "#dfe1f9",
+              "surface-container-low": "#f4f2ff",
+              "on-primary-container": "#f7f5ff",
+              "background": "#fbf8ff",
+              "tertiary": "#50586e",
+              "surface-container": "#ececff",
+              "tertiary-fixed-dim": "#bfc6e0",
+              "outline": "#757686",
+              "on-surface-variant": "#454654"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            "spacing": {
+              "space-md": "1rem",
+              "margin-mobile": "1rem",
+              "space-xs": "0.25rem",
+              "margin": "1.25rem",
+              "gutter-mobile": "0.75rem",
+              "space-xl": "2rem",
+              "space-sm": "0.5rem",
+              "space-lg": "1.5rem",
+              "gutter": "1rem"
+            },
+            "fontFamily": {
+              "body-sm": ["IBM Plex Sans"],
+              "headline-sm": ["IBM Plex Sans"],
+              "caption": ["IBM Plex Sans"],
+              "display-lg": ["IBM Plex Sans"],
+              "body-lg": ["IBM Plex Sans"],
+              "display-lg-mobile": ["IBM Plex Sans"],
+              "headline-md": ["IBM Plex Sans"],
+              "label-numeric": ["IBM Plex Sans"],
+              "body-md": ["IBM Plex Sans"]
+            },
+            "fontSize": {
+              "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+              "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }],
+              "caption": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+              "display-lg": ["34px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+              "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "500" }],
+              "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+              "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+              "label-numeric": ["15px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }],
+              "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        font-family: 'IBM Plex Sans', sans-serif;
+        background-color: #fbf8ff;
+        color: #181a2c;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased flex justify-center items-center min-h-screen">
+<div class="w-full max-w-md h-[844px] bg-surface flex flex-col justify-between relative overflow-hidden shadow-2xl" id="security-pin-lock-root">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between px-margin-mobile pt-10 pb-3 w-full bg-surface">
+<button aria-label="إغلاق الورديّة والمطابقة" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors active:scale-95 duration-150 text-primary">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<h1 class="text-headline-sm font-headline-sm font-bold text-on-surface">إغلاق الورديّة والمطابقة</h1>
+<button aria-label="السجل" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors active:scale-95 duration-150 text-primary">
+<span class="material-symbols-outlined">history</span>
+</button>
+</header>
+<!-- Main Security Content Area -->
+<main class="flex-1 flex flex-col items-center justify-center px-6 text-center">
+<!-- Brand Icon / Security Shield -->
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-6 shadow-sm">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<!-- Title & Subtitle -->
+<h2 class="text-headline-md font-headline-md text-on-surface mb-2">قفل الأمان</h2>
+<p class="text-body-md font-body-md text-secondary max-w-[280px] mb-8">أدخل رمز PIN لتأكيد فتح دفتر المحافظ</p>
+<!-- PIN Indicators -->
+<div class="flex items-center justify-center gap-4 mb-10" id="pin-indicators">
+<div class="w-4 h-4 rounded-full bg-surface-container-high transition-all duration-200" data-index="0"></div>
+<div class="w-4 h-4 rounded-full bg-surface-container-high transition-all duration-200" data-index="1"></div>
+<div class="w-4 h-4 rounded-full bg-surface-container-high transition-all duration-200" data-index="2"></div>
+<div class="w-4 h-4 rounded-full bg-surface-container-high transition-all duration-200" data-index="3"></div>
+</div>
+<!-- 3x4 Numeric Keypad -->
+<div class="grid grid-cols-3 gap-4 w-full max-w-[280px] mx-auto mb-6">
+<button class="keypad-btn w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-label-numeric font-label-numeric text-on-surface active:scale-95 transition-all mx-auto" data-digit="1">1</button>
+<button class="keypad-btn w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-label-numeric font-label-numeric text-on-surface active:scale-95 transition-all mx-auto" data-digit="2">2</button>
+<button class="keypad-btn w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-label-numeric font-label-numeric text-on-surface active:scale-95 transition-all mx-auto" data-digit="3">3</button>
+<button class="keypad-btn w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-label-numeric font-label-numeric text-on-surface active:scale-95 transition-all mx-auto" data-digit="4">4</button>
+<button class="keypad-btn w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-label-numeric font-label-numeric text-on-surface active:scale-95 transition-all mx-auto" data-digit="5">5</button>
+<button class="keypad-btn w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-label-numeric font-label-numeric text-on-surface active:scale-95 transition-all mx-auto" data-digit="6">6</button>
+<button class="keypad-btn w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-label-numeric font-label-numeric text-on-surface active:scale-95 transition-all mx-auto" data-digit="7">7</button>
+<button class="keypad-btn w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-label-numeric font-label-numeric text-on-surface active:scale-95 transition-all mx-auto" data-digit="8">8</button>
+<button class="keypad-btn w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-label-numeric font-label-numeric text-on-surface active:scale-95 transition-all mx-auto" data-digit="9">9</button>
+<button aria-label="البصمة" class="w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-all mx-auto" id="btn-biometric-unlock">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
+</button>
+<button class="keypad-btn w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-label-numeric font-label-numeric text-on-surface active:scale-95 transition-all mx-auto" data-digit="0">0</button>
+<button aria-label="حذف" class="w-16 h-16 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-secondary active:scale-95 transition-all mx-auto" id="btn-keypad-backspace">
+<span class="material-symbols-outlined text-[22px]">backspace</span>
+</button>
+</div>
+<!-- Quick Actions -->
+<div class="flex items-center justify-center gap-6 text-body-sm font-body-sm">
+<button class="text-primary hover:underline py-2">نسيت رمز PIN؟</button>
+<span class="text-outline-variant">•</span>
+<button class="text-secondary hover:underline py-2">تبديل الحساب</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Shell) -->
+
+</div>
+<script>
+        // Micro-interactions for PIN input simulator
+        let currentPin = [];
+        const indicators = document.querySelectorAll('#pin-indicators > div');
+        
+        document.querySelectorAll('.keypad-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                if (currentPin.length < 4) {
+                    currentPin.push(button.getAttribute('data-digit'));
+                    updateIndicators();
+                }
+            });
+        });
+
+        document.getElementById('btn-keypad-backspace').addEventListener('click', () => {
+            if (currentPin.length > 0) {
+                currentPin.pop();
+                updateIndicators();
+            }
+        });
+
+        document.getElementById('btn-biometric-unlock').addEventListener('click', () => {
+            // Simulate biometric success pulse
+            const bioBtn = document.getElementById('btn-biometric-unlock');
+            bioBtn.classList.add('bg-primary-container', 'text-on-primary');
+            setTimeout(() => {
+                bioBtn.classList.remove('bg-primary-container', 'text-on-primary');
+            }, 400);
+        });
+
+        function updateIndicators() {
+            indicators.forEach((ind, index) => {
+                if (index < currentPin.length) {
+                    ind.classList.remove('bg-surface-container-high');
+                    ind.classList.add('bg-primary-container');
+                } else {
+                    ind.classList.remove('bg-primary-container');
+                    ind.classList.add('bg-surface-container-high');
+                }
+            });
+        }
+    </script>
+
+
+</body></html>

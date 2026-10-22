@@ -1,0 +1,3 @@
+# Copy these keys to ~/.gradle/gradle.properties and replace the placeholders.
+HOME_CASH_SUPABASE_URL=https://YOUR_PROJECT_REF.supabase.co
+HOME_CASH_SUPABASE_ANON_KEY=sb_publishable_REPLACE_WITH_YOUR_PROJECT_KEY

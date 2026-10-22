@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html class="h-full" dir="rtl" lang="ar" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>الإعدادات العامة — دفتر المحافظ</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-surface": "#181a2c",
+            "on-tertiary-fixed": "#131b2e",
+            "surface-container-highest": "#dfe1f9",
+            "on-secondary-container": "#606470",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed": "#000d60",
+            "surface-variant": "#dfe1f9",
+            "on-tertiary-container": "#f5f5ff",
+            "outline": "#757686",
+            "tertiary": "#50586e",
+            "surface-tint": "#3a4fd4",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f4f2ff",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#f0efff",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "outline-variant": "#c5c5d7",
+            "secondary": "#5a5e6a",
+            "tertiary-container": "#697087",
+            "surface-container": "#ececff",
+            "primary-fixed": "#dfe0ff",
+            "primary": "#3348ce",
+            "on-secondary-fixed-variant": "#424752",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#dfe2f0",
+            "on-background": "#181a2c",
+            "tertiary-fixed": "#dbe2fd",
+            "inverse-surface": "#2c2f41",
+            "surface-bright": "#fbf8ff",
+            "primary-fixed-dim": "#bbc3ff",
+            "inverse-primary": "#bbc3ff",
+            "surface": "#fbf8ff",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed": "#171c25",
+            "on-surface-variant": "#454654",
+            "on-primary-container": "#f7f5ff",
+            "primary-container": "#4f63e8",
+            "secondary-fixed-dim": "#c3c6d3",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#dfe2f0",
+            "surface-dim": "#d7d8f0",
+            "tertiary-fixed-dim": "#bfc6e0",
+            "surface-container-high": "#e5e6ff",
+            "on-primary-fixed-variant": "#1b33bc",
+            "on-error": "#ffffff",
+            "background": "#fbf8ff"
+          },
+          fontFamily: {
+            sans: ["'IBM Plex Sans Arabic'", "sans-serif"],
+            body: ["'IBM Plex Sans Arabic'", "sans-serif"],
+            heading: ["'IBM Plex Sans Arabic'", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      background-color: #fbf8ff;
+      color: #181a2c;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-shadow {
+      box-shadow: 0px 4px 20px -2px rgba(79, 99, 232, 0.06);
+    }
+    .toggle-checkbox:checked {
+      right: auto;
+      left: 2px;
+      background-color: #ffffff;
+    }
+    .toggle-checkbox:checked + .toggle-label {
+      background-color: #4f63e8;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col items-center selection:bg-surface-container-high selection:text-primary">
+<!-- Mobile Wrapper Device Frame -->
+<div class="w-full max-w-md mx-auto min-h-screen bg-background flex flex-col relative pb-32 px-4 sm:px-0 border-x border-outline-variant/20 shadow-xl">
+<!-- Top App Bar / Header -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 px-4 py-3 flex items-center justify-between"><div class="flex items-center gap-3"><button aria-label="الرجوع" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container transition-colors active:scale-95" id="back-btn" type="button"><span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span></button><h1 class="text-lg font-bold text-on-surface tracking-tight">الإعدادات</h1></div><div class="flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-700 border border-amber-300 text-xs font-semibold shadow-sm"><span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span><span>وضع تجريبي — بيانات وهمية</span><button class="text-[11px] font-bold text-amber-800 bg-amber-200/80 hover:bg-amber-300 px-2 py-0.5 rounded-full transition-colors active:scale-95 mr-1" id="end-demo-btn" type="button">إنهاء التجربة</button></div></header>
+<!-- Main Content -->
+<main class="flex-1 px-4 py-5 space-y-5"><!-- Profile Card -->
+<section class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/40 custom-shadow relative overflow-hidden">
+<div class="flex items-start justify-between gap-3 relative z-10">
+<div class="flex items-center gap-3.5">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shrink-0 border border-primary/20">
+<span class="material-symbols-outlined text-3xl" data-icon="storefront">storefront</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<h2 class="text-base font-bold text-on-surface">محل الباشا فون</h2>
+<span class="text-xs text-secondary font-medium">/ محمد فوزي</span>
+</div>
+<div class="flex items-center gap-2 text-xs text-secondary">
+<span class="font-medium" dir="ltr">01023455842</span>
+<span>•</span>
+<span class="font-medium text-[11px]" dir="ltr">basha.phone@gmail.com</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-[11px] font-bold border border-primary/20">
+<span class="material-symbols-outlined text-sm" data-icon="store">store</span>
+<span>محل / تاجر</span>
+</div>
+</div>
+</div>
+<button aria-label="تعديل الحساب" class="px-3 py-1.5 rounded-xl bg-surface-container-low hover:bg-surface-container flex items-center gap-1.5 text-secondary hover:text-primary transition-colors text-xs font-semibold border border-outline-variant/30" id="edit-store-btn" type="button">
+<span class="material-symbols-outlined text-base" data-icon="edit">edit</span>
+<span>تعديل</span>
+</button>
+</div>
+</section>
+<!-- Group 1: الحساب -->
+<section class="space-y-2">
+<div class="px-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base" data-icon="manage_accounts">manage_accounts</span>
+<h3 class="text-xs font-bold text-secondary uppercase tracking-wider">الحساب</h3>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 custom-shadow divide-y divide-outline-variant/20 overflow-hidden">
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#profile">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="person">person</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">الملف الشخصي</h4>
+<p class="text-xs text-secondary mt-0.5">تعديل بيانات صاحب المحل والاسم التجاري</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</a>
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#account-type">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="badge">badge</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">نوع الاستخدام</h4>
+<p class="text-xs text-secondary mt-0.5">محل / تاجر (مفعل)</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full border border-primary/20">محل</span>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</div>
+</a>
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#linked-devices">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="devices">devices</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">الأجهزة المرتبطة</h4>
+<p class="text-xs text-secondary mt-0.5">هاتف سامسونج A54 وجهاز كاشير إضافي</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</a>
+</div>
+</section>
+<!-- Group 2: الخطوط والمحافظ -->
+<section class="space-y-2">
+<div class="px-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base" data-icon="sim_card">sim_card</span>
+<h3 class="text-xs font-bold text-secondary uppercase tracking-wider">الخطوط والمحافظ</h3>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 custom-shadow divide-y divide-outline-variant/20 overflow-hidden">
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#wallets-lines" id="wallets-config-btn">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-container text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-xl" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">إدارة الخطوط والمحافظ</h4>
+<p class="text-xs text-secondary mt-0.5">تهيئة شرائح SIM 1 و SIM 2 ومحافظ الكاش</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</a>
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#commissions-rules">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="percent">percent</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">قواعد ونسب العمولات</h4>
+<span class="text-[10px] font-semibold text-secondary bg-surface-container px-1.5 py-0.2 rounded">تاجر فقط</span>
+</div>
+<p class="text-xs text-secondary mt-0.5">تحديد نسب السحب والإيداع وأرباح المحل</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</a>
+</div>
+</section>
+<!-- Group 3: قراءة الرسائل -->
+<section class="space-y-2">
+<div class="px-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base" data-icon="sms">sms</span>
+<h3 class="text-xs font-bold text-secondary uppercase tracking-wider">قراءة الرسائل</h3>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 custom-shadow divide-y divide-outline-variant/20 overflow-hidden">
+<div class="p-3.5 flex items-center justify-between gap-3 hover:bg-surface-container-low/30 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-xl" data-icon="sync_saved_locally">sync_saved_locally</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">قراءة الرسائل تلقائياً</h4>
+<p class="text-xs text-emerald-600 font-medium mt-0.5">مفعّلة — يتم رصد إشعارات التحويل لحظياً</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 active:scale-95 transition-transform">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant/60 peer-focus:outline-none rounded-full peer peer-checked:bg-primary-container transition-all relative after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm peer-checked:after:-translate-x-5"></div>
+</label>
+</div>
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#review-sms">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="mark_chat_unread">mark_chat_unread</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">مراجعة الرسائل</h4>
+<p class="text-xs text-secondary mt-0.5">تدقيق الرسائل المشكوك فيها أو غير المكتملة</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-300">3 معلقة</span>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</div>
+</a>
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#balance-match">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="radar">radar</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">مطابقة الرصيد</h4>
+<p class="text-xs text-secondary mt-0.5">كاشف الفجوات وفحص تسلسل الأرصدة</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</a>
+</div>
+</section>
+<!-- Group 4: التقارير والبيانات -->
+<section class="space-y-2">
+<div class="px-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base" data-icon="analytics">analytics</span>
+<h3 class="text-xs font-bold text-secondary uppercase tracking-wider">التقارير والبيانات</h3>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 custom-shadow divide-y divide-outline-variant/20 overflow-hidden">
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#export-backup" id="export-reports-btn">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="file_download">file_download</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">النسخ والتصدير</h4>
+<p class="text-xs text-secondary mt-0.5">تصدير Excel أو PDF ومشاركة كبسولة واتساب</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</a>
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#close-shift">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="point_of_sale">point_of_sale</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">إقفال الوردية</h4>
+<span class="text-[10px] font-semibold text-secondary bg-surface-container px-1.5 py-0.2 rounded">تاجر</span>
+</div>
+<p class="text-xs text-secondary mt-0.5">مطابقة الخزينة النقدية واعتماد إقفال اليومية</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</a>
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#team-permissions">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="groups">groups</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">فريق العمل والصلاحيات</h4>
+<span class="text-[10px] font-semibold text-secondary bg-surface-container px-1.5 py-0.2 rounded">محل</span>
+</div>
+<p class="text-xs text-secondary mt-0.5">تحديد صلاحيات الكاشير والاطلاع على الأرباح</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</a>
+</div>
+</section>
+<!-- Group 5: المظهر والأمان -->
+<section class="space-y-2">
+<div class="px-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base" data-icon="shield">shield</span>
+<h3 class="text-xs font-bold text-secondary uppercase tracking-wider">المظهر والأمان</h3>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 custom-shadow divide-y divide-outline-variant/20 overflow-hidden">
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#theme-language">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="palette">palette</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">اللغة والمظهر</h4>
+<p class="text-xs text-secondary mt-0.5">العربية • المظهر الفاتح (Light Mode)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</a>
+<div class="p-3.5 flex items-center justify-between gap-3 hover:bg-surface-container-low/30 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-xl" data-icon="lock">lock</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">قفل التطبيق</h4>
+<p class="text-xs text-secondary mt-0.5">حماية الدفتر برمز PIN أو البصمة</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 active:scale-95 transition-transform">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant/60 peer-focus:outline-none rounded-full peer peer-checked:bg-primary-container transition-all relative after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm peer-checked:after:-translate-x-5"></div>
+</label>
+</div>
+<div class="p-3.5 flex items-center justify-between gap-3 hover:bg-surface-container-low/30 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-xl" data-icon="visibility_off">visibility_off</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">إخفاء الأرصدة افتراضياً</h4>
+<p class="text-xs text-secondary mt-0.5">تمويه المبالغ النقدية في الشاشة الرئيسية</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 active:scale-95 transition-transform">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant/60 peer-focus:outline-none rounded-full peer peer-checked:bg-primary-container transition-all relative after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm peer-checked:after:-translate-x-5"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Group 6: حول التطبيق -->
+<section class="space-y-2">
+<div class="px-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base" data-icon="info">info</span>
+<h3 class="text-xs font-bold text-secondary uppercase tracking-wider">حول التطبيق</h3>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 custom-shadow divide-y divide-outline-variant/20 overflow-hidden">
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#support" id="live-support-btn">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">الدعم الفني المباشر</h4>
+<p class="text-xs text-secondary mt-0.5">تواصل مع فريق الدعم والمساعدة</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</a>
+<a class="p-3.5 flex items-center justify-between hover:bg-surface-container-low/40 active:scale-[0.99] transition-all group min-h-[48px]" href="#privacy-terms">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="policy">policy</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">سياسة الخصوصية وشروط الاستخدام</h4>
+<p class="text-xs text-secondary mt-0.5">معالجة الرسائل محلياً على جهازك</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:-translate-x-1 group-hover:text-primary transition-all text-lg" data-icon="arrow_back_ios">arrow_back_ios</span>
+</a>
+<div class="p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-xl" data-icon="verified">verified</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">إصدار التطبيق</h4>
+<p class="text-xs text-secondary mt-0.5">دفتر المحافظ HomeCash v1.0.0</p>
+</div>
+</div>
+<span class="text-xs font-bold text-secondary px-2.5 py-1 rounded-full bg-surface-container">v1.0.0</span>
+</div>
+</div>
+</section></main><div class="fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-xl text-xs font-semibold shadow-lg transition-all duration-300 opacity-0 pointer-events-none flex items-center gap-2" id="interactive-toast"><span class="material-symbols-outlined text-base text-primary-fixed">info</span><span class="" id="toast-message">تم التحديث بنجاح</span></div><div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4 opacity-0 pointer-events-none transition-opacity duration-200" id="transfer-modal"><div class="bg-surface-container-lowest w-full max-w-md rounded-t-3xl sm:rounded-2xl p-5 border border-outline-variant/30 shadow-2xl transition-transform duration-200 transform translate-y-full sm:translate-y-0"><div class="flex items-center justify-between pb-3 border-b border-outline-variant/20"><div class="flex items-center gap-2"><div class="w-9 h-9 rounded-xl bg-primary-container text-white flex items-center justify-center"><span class="material-symbols-outlined text-xl">send_money</span></div><h3 class="text-sm font-bold text-on-surface">تحويل فوري سريع</h3></div><button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:text-primary" id="close-transfer-modal"><span class="material-symbols-outlined text-lg">close</span></button></div><div class="py-4 space-y-3"><div class="space-y-1"><label class="text-xs font-bold text-secondary">رقم المحفظة المستلمة</label><input class="w-full px-3.5 py-2.5 rounded-xl border border-outline-variant/40 bg-surface-container-low text-xs text-on-surface focus:outline-none focus:border-primary" dir="ltr" placeholder="010xxxxxxxx / 011xxxxxxxx" type="tel"/></div><div class="space-y-1"><label class="text-xs font-bold text-secondary">المبلغ (ج.م)</label><input class="w-full px-3.5 py-2.5 rounded-xl border border-outline-variant/40 bg-surface-container-low text-xs text-on-surface font-bold text-primary focus:outline-none focus:border-primary" placeholder="0.00" type="number"/></div><div class="flex items-center justify-between text-xs text-secondary bg-surface-container-low/50 p-2.5 rounded-xl border border-outline-variant/20"><span class="">العمولة المحسوبة تلقائياً:</span><span class="font-bold text-emerald-600">5.00 ج.م</span></div></div><div class="pt-2 flex gap-2"><button class="flex-1 py-2.5 bg-primary hover:bg-primary/90 text-white font-bold text-xs rounded-xl shadow transition-all active:scale-95" id="confirm-transfer-btn">تأكيد والخصم من الدرج</button><button class="px-4 py-2.5 bg-surface-container hover:bg-surface-container-high text-secondary font-semibold text-xs rounded-xl transition-all" id="cancel-transfer-btn">إلغاء</button></div></div></div><div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-200" id="edit-store-modal"><div class="bg-surface-container-lowest w-full max-w-md rounded-2xl p-5 border border-outline-variant/30 shadow-2xl"><div class="flex items-center justify-between pb-3 border-b border-outline-variant/20"><h3 class="text-sm font-bold text-on-surface">تعديل بيانات المحل والكاشير</h3><button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:text-primary" id="close-store-modal"><span class="material-symbols-outlined text-lg">close</span></button></div><div class="py-4 space-y-3"><div class="space-y-1"><label class="text-xs font-bold text-secondary">اسم المتجر</label><input class="w-full px-3.5 py-2 rounded-xl border border-outline-variant/40 bg-surface-container-low text-xs text-on-surface focus:outline-none focus:border-primary" id="input-store-name" type="text" value="محل الباشا فون"/></div><div class="space-y-1"><label class="text-xs font-bold text-secondary">اسم الكاشير المسؤول</label><input class="w-full px-3.5 py-2 rounded-xl border border-outline-variant/40 bg-surface-container-low text-xs text-on-surface focus:outline-none focus:border-primary" id="input-cashier-name" type="text" value="محمد فوزي"/></div></div><div class="pt-2 flex gap-2"><button class="flex-1 py-2.5 bg-primary text-white font-bold text-xs rounded-xl shadow active:scale-95 transition-all" id="save-store-btn">حفظ البيانات</button></div></div></div>
+<!-- 7. الشريط السفلي الموحد الثابت (Fixed Bottom Navigation) -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-lg mx-auto w-full z-50 flex items-center justify-around px-2 h-20 bg-surface-container-lowest/95 backdrop-blur-lg border-t border-outline-variant/30 shadow-[0_-4px_20px_rgba(0,0,0,0.06)]"><a class="flex-1 flex flex-col items-center justify-center text-secondary py-1 hover:text-primary transition-colors active:scale-95" href="#home"><span class="material-symbols-outlined text-2xl" data-icon="home">home</span><span class="text-[11px] font-medium mt-1">الرئيسية</span></a><a class="flex-1 flex flex-col items-center justify-center text-secondary py-1 hover:text-primary transition-colors active:scale-95" href="#transactions"><span class="material-symbols-outlined text-2xl" data-icon="receipt_long">receipt_long</span><span class="text-[11px] font-medium mt-1">المعاملات</span></a><a class="flex-1 flex flex-col items-center justify-center text-secondary py-1 hover:text-primary transition-colors active:scale-95" href="#reports"><span class="material-symbols-outlined text-2xl" data-icon="analytics">analytics</span><span class="text-[11px] font-medium mt-1">التقارير</span></a><button class="flex-1 flex flex-col items-center justify-center text-white py-1 transition-all active:scale-95" id="settings-screen-root" type="button"><div class="flex flex-col items-center justify-center bg-[#4F63E8] rounded-full px-4 py-1.5 shadow-md"><span class="material-symbols-outlined text-2xl text-white" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span><span class="text-[11px] font-bold mt-0.5 text-white">الإعدادات</span></div></button></nav>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){function showToast(msg){var t=document.getElementById('interactive-toast');var tm=document.getElementById('toast-message');if(!t||!tm)return;tm.textContent=msg;t.classList.remove('opacity-0','pointer-events-none');setTimeout(function(){t.classList.add('opacity-0','pointer-events-none');},2500);}var transferModal=document.getElementById('transfer-modal');var transferTrigger=document.getElementById('quick-transfer-trigger');var closeTransfer=document.getElementById('close-transfer-modal');var cancelTransfer=document.getElementById('cancel-transfer-btn');var confirmTransfer=document.getElementById('confirm-transfer-btn');function openTransfer(){if(transferModal){transferModal.classList.remove('opacity-0','pointer-events-none');var inner=transferModal.firstElementChild;if(inner)inner.classList.remove('translate-y-full');}}function hideTransfer(){if(transferModal){transferModal.classList.add('opacity-0','pointer-events-none');var inner=transferModal.firstElementChild;if(inner)inner.classList.add('translate-y-full');}}if(transferTrigger)transferTrigger.addEventListener('click',openTransfer);if(closeTransfer)closeTransfer.addEventListener('click',hideTransfer);if(cancelTransfer)cancelTransfer.addEventListener('click',hideTransfer);if(confirmTransfer)confirmTransfer.addEventListener('click',function(){hideTransfer();showToast('تم إرسال التحويل وقيد الخصم من الدرج بنجاح!');});var storeModal=document.getElementById('edit-store-modal');var editStoreBtn=document.getElementById('edit-store-btn');var closeStoreModal=document.getElementById('close-store-modal');var saveStoreBtn=document.getElementById('save-store-btn');if(editStoreBtn)editStoreBtn.addEventListener('click',function(){if(storeModal)storeModal.classList.remove('opacity-0','pointer-events-none');});if(closeStoreModal)closeStoreModal.addEventListener('click',function(){if(storeModal)storeModal.classList.add('opacity-0','pointer-events-none');});if(saveStoreBtn)saveStoreBtn.addEventListener('click',function(){var name=document.getElementById('input-store-name').value;var cashier=document.getElementById('input-cashier-name').value;var storeHeading=document.querySelector('main h2');if(storeHeading&&name)storeHeading.textContent=name;var cashierSpan=document.querySelector('main p span.font-bold');if(cashierSpan&&cashier)cashierSpan.textContent=cashier;if(storeModal)storeModal.classList.add('opacity-0','pointer-events-none');showToast('تم حفظ بيانات المتجر بنجاح');});var backBtn=document.getElementById('back-btn');if(backBtn)backBtn.addEventListener('click',function(){showToast('العودة إلى شاشة دفتر المحافظ الرئيسية');});var walletsBtn=document.getElementById('wallets-config-btn');if(walletsBtn)walletsBtn.addEventListener('click',function(e){e.preventDefault();showToast('جاري فتح إعدادات المحافظ وقواعد العمولات...');});var simCard=document.getElementById('sim-check-card');if(simCard){simCard.style.cursor='pointer';simCard.addEventListener('click',function(){showToast('تم فحص شرائح SIM: الشريحتان متصلتان ومتزامنتان 100%');});}var exportBtn=document.getElementById('export-reports-btn');if(exportBtn)exportBtn.addEventListener('click',function(){showToast('تم تصدير ملف اليومية بصيغة Excel & PDF بنجاح');});var backupBtn=document.getElementById('backup-now-btn');if(backupBtn)backupBtn.addEventListener('click',function(){this.textContent='جاري النسخ...';var b=this;setTimeout(function(){b.textContent='نسخ الآن';showToast('تم إنشاء نسخة احتياطية محلية مشفرة بنجاح');},900);});var supportBtn=document.getElementById('live-support-btn');if(supportBtn)supportBtn.addEventListener('click',function(e){e.preventDefault();showToast('جاري تحويلك لممثل الدعم الفني الفوري عبر WhatsApp...');});var toggles=document.querySelectorAll('input[type="checkbox"]');toggles.forEach(function(tg){tg.addEventListener('change',function(){var status=this.checked?'تفعيل':'تعطيل';showToast('تم '+status+' الخاصية بنجاح');});});var navLinks=document.querySelectorAll('nav a, nav button');navLinks.forEach(function(item){if(item.id==='quick-transfer-trigger')return;item.addEventListener('click',function(e){if(this.getAttribute('href'))e.preventDefault();var title=this.querySelector('span:last-child');var tabName=title?title.textContent.trim():'التبويب';showToast('الانتقال إلى قسم: '+tabName);});});});</script></body></html>

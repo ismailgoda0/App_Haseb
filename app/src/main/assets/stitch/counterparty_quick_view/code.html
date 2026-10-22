@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior:none;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary": "#ffffff", "outline": "#757686", "error": "#ba1a1a", "surface-bright": "#fbf8ff", "on-surface": "#181a2c", "on-secondary-fixed": "#171c25", "surface-container-highest": "#dfe1f9", "primary": "#3348ce", "primary-fixed-dim": "#bbc3ff", "tertiary-fixed-dim": "#bfc6e0", "surface-tint": "#3a4fd4", "on-tertiary-fixed": "#131b2e", "primary-container": "#4f63e8", "tertiary-container": "#697087", "on-surface-variant": "#454654", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#3f465c", "tertiary-fixed": "#dbe2fd", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "surface-container-high": "#e5e6ff", "secondary": "#5a5e6a", "secondary-fixed": "#dfe2f0", "inverse-primary": "#bbc3ff", "surface-container": "#ececff", "on-secondary-fixed-variant": "#424752", "inverse-surface": "#2c2f41", "on-error": "#ffffff", "on-primary-fixed": "#000d60", "on-primary-fixed-variant": "#1b33bc", "on-primary-container": "#f7f5ff", "secondary-fixed-dim": "#c3c6d3", "outline-variant": "#c5c5d7", "surface-dim": "#d7d8f0", "primary-fixed": "#dfe0ff", "inverse-on-surface": "#f0efff", "on-background": "#181a2c", "surface": "#fbf8ff", "surface-container-low": "#f4f2ff", "error-container": "#ffdad6", "on-secondary-container": "#606470", "surface-variant": "#dfe1f9", "on-tertiary-container": "#f5f5ff", "tertiary": "#50586e", "background": "#fbf8ff", "secondary-container": "#dfe2f0" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "space-xl": "2rem", "gutter": "1rem", "margin": "1.25rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "body-md": ["IBM Plex Sans"], "caption": ["IBM Plex Sans"], "body-lg": ["IBM Plex Sans"], "headline-md": ["IBM Plex Sans"], "body-sm": ["IBM Plex Sans"], "display-lg-mobile": ["IBM Plex Sans"], "display-lg": ["IBM Plex Sans"], "headline-sm": ["IBM Plex Sans"], "label-numeric": ["IBM Plex Sans"] }, fontSize: { "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "caption": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg": ["34px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }], "label-numeric": ["15px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-margin-mobile flex items-center justify-between"><button aria-label="رجوع" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_forward</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate text-center">إنشاء حساب</h1><div class="w-10 h-10"></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface px-margin-mobile"><div class="mobile-container flex flex-col w-full pb-8 gap-4" id="counterparty-screen-root">
+<!-- Top Bar -->
+<div class="flex items-center justify-between py-2" id="counterparty-top-bar">
+<button aria-label="رجوع" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()">
+<span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-on-surface font-semibold">كشف حساب الطرف الآخر</h1>
+<button aria-label="مشاركة" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[24px]">share</span>
+</button>
+</div>
+<!-- Profile Card -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm flex flex-col gap-3" id="counterparty-profile-card">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-primary to-primary-container shadow-md flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[28px]">person</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">أحمد فتحي — تاجر كروت وموزع</h2>
+<span class="font-body-sm text-body-sm text-secondary" dir="ltr">01023456789</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-caption font-medium text-on-surface-variant">فودافون كاش</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-caption font-medium text-on-surface-variant">إنستا باي</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary font-semibold">38 عملية</span>
+</div>
+</div>
+<!-- Financial Summary -->
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm flex flex-col gap-4" id="counterparty-financial-summary">
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3.5 rounded-2xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-caption text-caption text-secondary">إجمالي المرسل</span>
+<span class="font-headline-sm text-headline-sm text-error font-bold" dir="ltr">-34,500.00 ج.م</span>
+</div>
+<div class="p-3.5 rounded-2xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-caption text-caption text-secondary">إجمالي المستلم</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold" dir="ltr">+28,000.00 ج.م</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3.5 rounded-2xl bg-primary-container/10">
+<span class="font-body-md text-body-md text-on-surface font-medium">عمولة المتجر الصافية</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold" dir="ltr">+450.00 ج.م</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-3 gap-3" id="counterparty-action-buttons">
+<button class="h-12 rounded-2xl bg-surface-container-lowest border border-[#E5E9F8] text-on-surface font-body-sm text-body-sm font-semibold flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">call</span>
+<span>اتصال</span>
+</button>
+<button class="h-12 rounded-2xl bg-surface-container-lowest border border-[#E5E9F8] text-on-surface font-body-sm text-body-sm font-semibold flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">chat</span>
+<span>واتساب</span>
+</button>
+<button class="h-12 rounded-2xl bg-surface-container-lowest border border-[#E5E9F8] text-on-surface font-body-sm text-body-sm font-semibold flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">description</span>
+<span>تصدير PDF</span>
+</button>
+</div>
+<!-- Transactions List -->
+<div class="flex flex-col gap-3" id="counterparty-transactions-list">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">سجل المعاملات</h3>
+<div class="bg-surface-container-lowest rounded-3xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">arrow_upward</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">تحويل لـ فودافون كاش</span>
+<span class="font-caption text-caption text-secondary">اليوم، 04:30 م · مرجع: #94821</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-body-lg text-body-lg text-error font-bold" dir="ltr">-1,500.00 ج.م</span>
+<span class="font-caption text-caption text-primary">عمولة: +15.00 ج.م</span>
+</div>
+</div>
+<div class="flex items-center justify-between pb-3 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container/15 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">استلام عبر إنستا باي</span>
+<span class="font-caption text-caption text-secondary">أمس، 02:15 م · مرجع: #94712</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-body-lg text-body-lg text-primary font-bold" dir="ltr">+3,000.00 ج.م</span>
+<span class="font-caption text-caption text-secondary">بدون عمولة</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 inset-x-0 bg-surface/90 backdrop-blur-xl border-t border-surface-container flex items-center justify-around py-3 pb-safe z-50" id="bottom-navigation-bar">
+<button class="flex flex-col items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-caption text-caption">الرئيسية</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary font-semibold">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-caption text-caption">المعاملات</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[24px]">bar_chart</span>
+<span class="font-caption text-caption">التقارير</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+<span class="font-caption text-caption">الإعدادات</span>
+</button>
+</div></main>
+</body></html>

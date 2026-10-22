@@ -1,0 +1,281 @@
+[
+  {
+    "id": "vodafone_cash",
+    "slug": "vodafone",
+    "name_ar": "فودافون كاش",
+    "name_en": "Vodafone Cash",
+    "short_name": "VF Cash",
+    "badge_text": "VF",
+    "hotline": "7001",
+    "ussd_code": "*9#",
+    "default_fee_percent": 1.0,
+    "fee_description_ar": "عمولة 1% بحد أدنى 3 ج.م وأقصى 10 ج.م على السحب",
+    "fee_description_en": "1% fee with min 3 EGP and max 10 EGP on cashout",
+    "sms_senders": ["VF-Cash", "Vodafone", "VodafoneCash", "VFCash"],
+    "regex_pattern": "فودافون كاش|VF-Cash|Vodafone",
+    "colors": {
+      "light": {
+        "primary": "#E60000",
+        "container": "#FEECEB",
+        "on_container": "#8A0000",
+        "border": "#F8B4AF"
+      },
+      "dark": {
+        "primary": "#FF3B30",
+        "container": "#3D0C0A",
+        "on_container": "#FFD1CF",
+        "border": "#6E1B17"
+      }
+    },
+    "logo_type": "vector",
+    "logo_svg_path": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5zm3-2c0 .83-.67 1.5-1.5 1.5S13 15.33 13 14.5v-3c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v3z"
+  },
+  {
+    "id": "instapay",
+    "slug": "instapay",
+    "name_ar": "إنستاباي",
+    "name_en": "InstaPay (IPN)",
+    "short_name": "InstaPay",
+    "badge_text": "IP",
+    "hotline": "15997",
+    "ussd_code": "N/A",
+    "default_fee_percent": 0.0,
+    "fee_description_ar": "تحويلات مجانية وفورية عبر شبكة المدفوعات اللحظية IPN",
+    "fee_description_en": "Instant zero-fee bank & wallet transfers via IPN",
+    "sms_senders": ["InstaPay", "IPN", "EBC", "Instapay Egypt"],
+    "regex_pattern": "إنستاباي|InstaPay|شبكة المدفوعات اللحظية|IPN",
+    "colors": {
+      "light": {
+        "primary": "#28004D",
+        "container": "#F3EBF9",
+        "on_container": "#20003E",
+        "border": "#D8BFED"
+      },
+      "dark": {
+        "primary": "#8C43BA",
+        "container": "#240E36",
+        "on_container": "#E8D3F5",
+        "border": "#552175"
+      }
+    },
+    "logo_type": "vector",
+    "logo_svg_path": "M13 3L4 14h6l-1 7 9-11h-6l1-7z"
+  },
+  {
+    "id": "etisalat_cash",
+    "slug": "etisalat",
+    "name_ar": "اتصالات كاش",
+    "name_en": "Etisalat Cash (e&)",
+    "short_name": "e& Cash",
+    "badge_text": "e&",
+    "hotline": "778",
+    "ussd_code": "*777#",
+    "default_fee_percent": 1.0,
+    "fee_description_ar": "عمولة 1% على السحب النقدي عبر منافذ اتصالات وATM",
+    "fee_description_en": "1% cashout fee across e& outlets and ATMs",
+    "sms_senders": ["EtisalatCash", "Etisalat", "e&", "Etisalat Cash"],
+    "regex_pattern": "اتصالات كاش|Etisalat Cash|e& cash|اتصالات",
+    "colors": {
+      "light": {
+        "primary": "#72BF44",
+        "container": "#EFF9EB",
+        "on_container": "#285811",
+        "border": "#BDE2A4"
+      },
+      "dark": {
+        "primary": "#8DE05A",
+        "container": "#18330D",
+        "on_container": "#D2F5BE",
+        "border": "#36681E"
+      }
+    },
+    "logo_type": "vector",
+    "logo_svg_path": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2zm4 8h-2v-4h2v4zm0-6h-2v-2h2v2z"
+  },
+  {
+    "id": "orange_cash",
+    "slug": "orange",
+    "name_ar": "أورنج كاش",
+    "name_en": "Orange Cash",
+    "short_name": "Orange",
+    "badge_text": "OG",
+    "hotline": "626",
+    "ussd_code": "*115#",
+    "default_fee_percent": 1.0,
+    "fee_description_ar": "عمولة 1% على السحب لجميع فروع أورنج وماكينات الصراف",
+    "fee_description_en": "1% cashout fee at Orange branches and ATMs",
+    "sms_senders": ["Orange Cash", "OrangeMoney", "Orange", "OrangeCash"],
+    "regex_pattern": "أورنج كاش|Orange Cash|أورانج كاش|Orange",
+    "colors": {
+      "light": {
+        "primary": "#FF7900",
+        "container": "#FFF3E6",
+        "on_container": "#8F4400",
+        "border": "#FFC899"
+      },
+      "dark": {
+        "primary": "#FFA040",
+        "container": "#3D1C00",
+        "on_container": "#FFE5CC",
+        "border": "#803E00"
+      }
+    },
+    "logo_type": "vector",
+    "logo_svg_path": "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+  },
+  {
+    "id": "we_pay",
+    "slug": "we",
+    "name_ar": "وي باي",
+    "name_en": "WE Pay",
+    "short_name": "WE Pay",
+    "badge_text": "WE",
+    "hotline": "565",
+    "ussd_code": "*322#",
+    "default_fee_percent": 1.0,
+    "fee_description_ar": "عمولة سحب 1% عبر منافذ سنترالات WE وماكينات البنوك",
+    "fee_description_en": "1% fee on withdrawals via Telecom Egypt WE outlets",
+    "sms_senders": ["WEPay", "WE_Pay", "TelecomEgypt", "WE"],
+    "regex_pattern": "وي باي|WE Pay|WE|المصرية للاتصالات",
+    "colors": {
+      "light": {
+        "primary": "#5C2D91",
+        "container": "#F4EFFB",
+        "on_container": "#321156",
+        "border": "#CBB3E6"
+      },
+      "dark": {
+        "primary": "#9A63DB",
+        "container": "#240E3B",
+        "on_container": "#ECDDF9",
+        "border": "#552985"
+      }
+    },
+    "logo_type": "vector",
+    "logo_svg_path": "M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"
+  },
+  {
+    "id": "fawry",
+    "slug": "fawry",
+    "name_ar": "فوري",
+    "name_en": "Fawry",
+    "short_name": "Fawry",
+    "badge_text": "FW",
+    "hotline": "16421",
+    "ussd_code": "N/A",
+    "default_fee_percent": 1.5,
+    "fee_description_ar": "مدفوعات فواتير وشحن رصيد وإيداع محافظ فورية",
+    "fee_description_en": "Instant bill payments, vouchers & wallet topups",
+    "sms_senders": ["Fawry", "FawryPay", "myFawry"],
+    "regex_pattern": "فوري|Fawry|FawryPay",
+    "colors": {
+      "light": {
+        "primary": "#F3A100",
+        "container": "#FEF7E6",
+        "on_container": "#7A5100",
+        "border": "#FBD98C"
+      },
+      "dark": {
+        "primary": "#FFCB05",
+        "container": "#3B2E05",
+        "on_container": "#FFF1B8",
+        "border": "#755D08"
+      }
+    },
+    "logo_type": "vector",
+    "logo_svg_path": "M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.92zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.49-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.01-4.09l-2.45-1.45C16.14 17.94 14.21 19 12 19z"
+  },
+  {
+    "id": "cib_smart_wallet",
+    "slug": "cib",
+    "name_ar": "المحفظة الذكية CIB",
+    "name_en": "CIB Smart Wallet",
+    "short_name": "CIB Wallet",
+    "badge_text": "CIB",
+    "hotline": "19666",
+    "ussd_code": "N/A",
+    "default_fee_percent": 1.0,
+    "fee_description_ar": "المحفظة الذكية من البنك التجاري الدولي مصر CIB",
+    "fee_description_en": "Smart Wallet by Commercial International Bank Egypt",
+    "sms_senders": ["CIB", "SmartWallet", "CIB-Egypt"],
+    "regex_pattern": "CIB|Smart Wallet|المحفظة الذكية|التجاري الدولي",
+    "colors": {
+      "light": {
+        "primary": "#003A70",
+        "container": "#E6F0FA",
+        "on_container": "#001D38",
+        "border": "#99C0E6"
+      },
+      "dark": {
+        "primary": "#3E8EE0",
+        "container": "#0B223D",
+        "on_container": "#CBE1F7",
+        "border": "#194A7D"
+      }
+    },
+    "logo_type": "vector",
+    "logo_svg_path": "M4 10h3v7H4zM10.5 10h3v7h-3zM2 22h19v-3H2v3zm15-12h3v7h-3zM11.5 1L2 6v2h19V6l-9.5-5z"
+  },
+  {
+    "id": "bm_wallet",
+    "slug": "banque_misr",
+    "name_ar": "محفظة بنك مصر",
+    "name_en": "Banque Misr BM Wallet",
+    "short_name": "BM Wallet",
+    "badge_text": "BM",
+    "hotline": "19888",
+    "ussd_code": "N/A",
+    "default_fee_percent": 1.0,
+    "fee_description_ar": "محفظة بنك مصر الإلكترونية للمعاملات والتحويلات",
+    "fee_description_en": "BM Wallet by Banque Misr for quick mobile banking",
+    "sms_senders": ["BMWallet", "BanqueMisr", "BM_Wallet"],
+    "regex_pattern": "بنك مصر|BM Wallet|Banque Misr",
+    "colors": {
+      "light": {
+        "primary": "#941D2B",
+        "container": "#FAECEE",
+        "on_container": "#520B13",
+        "border": "#E5A4AC"
+      },
+      "dark": {
+        "primary": "#E04859",
+        "container": "#3D0B10",
+        "on_container": "#FAD0D5",
+        "border": "#851926"
+      }
+    },
+    "logo_type": "vector",
+    "logo_svg_path": "M11.5 1L2 6v2h19V6l-9.5-5zM4 10h3v7H4zm6.5 0h3v7h-3zm6.5 0h3v7h-3zM2 22h19v-3H2v3z"
+  },
+  {
+    "id": "nbe_phonecash",
+    "slug": "nbe",
+    "name_ar": "فون كاش البنك الأهلي",
+    "name_en": "NBE PhoneCash",
+    "short_name": "PhoneCash",
+    "badge_text": "NBE",
+    "hotline": "19623",
+    "ussd_code": "N/A",
+    "default_fee_percent": 1.0,
+    "fee_description_ar": "خدمة فون كاش من البنك الأهلي المصري للأفراد والتجار",
+    "fee_description_en": "PhoneCash mobile wallet by National Bank of Egypt",
+    "sms_senders": ["NBE", "PhoneCash", "NBE-Egypt"],
+    "regex_pattern": "الأهلي|فون كاش|PhoneCash|NBE|البنك الأهلي",
+    "colors": {
+      "light": {
+        "primary": "#006837",
+        "container": "#E6F6ED",
+        "on_container": "#00361C",
+        "border": "#92D8B3"
+      },
+      "dark": {
+        "primary": "#27B56C",
+        "container": "#062E18",
+        "on_container": "#C8F4DC",
+        "border": "#0D5B31"
+      }
+    },
+    "logo_type": "vector",
+    "logo_svg_path": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+  }
+]

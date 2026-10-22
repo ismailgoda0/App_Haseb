@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تهيئة الخطوط والمحافظ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary": "#ffffff",
+            "on-secondary-fixed-variant": "#424752",
+            "background": "#fbf8ff",
+            "primary": "#3348ce",
+            "on-surface-variant": "#454654",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "inverse-primary": "#bbc3ff",
+            "surface-container": "#ececff",
+            "surface-variant": "#dfe1f9",
+            "inverse-on-surface": "#f0efff",
+            "secondary": "#5a5e6a",
+            "surface": "#fbf8ff",
+            "primary-fixed-dim": "#bbc3ff",
+            "on-primary-container": "#f7f5ff",
+            "surface-bright": "#fbf8ff",
+            "surface-dim": "#d7d8f0",
+            "secondary-fixed-dim": "#c3c6d3",
+            "on-secondary-container": "#606470",
+            "on-surface": "#181a2c",
+            "outline": "#757686",
+            "on-primary-fixed-variant": "#1b33bc",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed-dim": "#bfc6e0",
+            "tertiary-fixed": "#dbe2fd",
+            "surface-container-low": "#f4f2ff",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#dfe1f9",
+            "on-primary-fixed": "#000d60",
+            "primary-container": "#4f63e8",
+            "tertiary": "#50586e",
+            "on-error-container": "#93000a",
+            "inverse-surface": "#2c2f41",
+            "error-container": "#ffdad6",
+            "on-background": "#181a2c",
+            "tertiary-container": "#697087",
+            "primary-fixed": "#dfe0ff",
+            "error": "#ba1a1a",
+            "secondary-container": "#dfe2f0",
+            "on-tertiary-container": "#f5f5ff",
+            "on-secondary-fixed": "#171c25",
+            "surface-container-high": "#e5e6ff",
+            "on-secondary": "#ffffff",
+            "surface-tint": "#3a4fd4",
+            "secondary-fixed": "#dfe2f0",
+            "outline-variant": "#c5c5d7",
+            "on-tertiary-fixed": "#131b2e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "0.75rem",
+            "space-md": "1rem",
+            "space-xl": "2rem",
+            "margin": "1.25rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["IBM Plex Sans"],
+            "label-numeric": ["IBM Plex Sans"],
+            "headline-md": ["IBM Plex Sans"],
+            "caption": ["IBM Plex Sans"],
+            "body-lg": ["IBM Plex Sans"],
+            "headline-sm": ["IBM Plex Sans"],
+            "display-lg": ["IBM Plex Sans"],
+            "display-lg-mobile": ["IBM Plex Sans"],
+            "body-sm": ["IBM Plex Sans"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-numeric": ["15px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "caption": ["11px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "display-lg": ["34px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col items-center">
+<div class="w-full max-w-md mx-auto min-h-screen flex flex-col bg-surface pb-12" id="step3-wallets-setup-root">
+<!-- Top App Bar -->
+<header class="flex items-center justify-between px-margin-mobile pt-10 pb-3 w-full bg-surface">
+<div class="flex items-center gap-3">
+<button class="w-11 h-11 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors active:scale-95">
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</button>
+<h1 class="text-headline-sm font-headline-sm font-bold text-on-surface">إغلاق الورديّة والمطابقة</h1>
+</div>
+<button class="w-11 h-11 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors active:scale-95">
+<span class="material-symbols-outlined text-primary">history</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-4 flex flex-col gap-6 pt-2">
+<!-- Step Header Section -->
+<div class="flex flex-col gap-1.5">
+<span class="text-caption font-caption text-primary-container font-bold tracking-wider">الخطوة 3 من 3</span>
+<h2 class="text-headline-md font-headline-md text-on-surface">تهيئة الخطوط والمحافظ</h2>
+<p class="text-body-md font-body-md text-secondary">تم اكتشاف المحافظ تلقائياً من شرائح SIM والرسائل</p>
+</div>
+<!-- Demo Mode Badge -->
+<div class="flex items-center gap-2 bg-[#DDE4FF] text-primary-container px-3 py-2 rounded-xl text-caption font-caption font-semibold">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>وضع تجريبي — بيانات وهمية فقط</span>
+</div>
+<!-- Detected SIMs Card -->
+<section class="bg-surface-container-lowest border border-[#E5E9F8] rounded-xl p-4 shadow-[0px_4px_20px_-2px_rgba(79,99,232,0.04)] flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h3 class="text-headline-sm font-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">sim_card</span>
+            شرائح SIM المكتشفة
+          </h3>
+<span class="bg-[#EEF1FF] text-primary px-2.5 py-1 rounded-full text-caption font-caption font-semibold">نشط</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- SIM 1 -->
+<div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold text-sm">1</div>
+<div>
+<p class="text-body-lg font-body-lg text-on-surface font-semibold">Vodafone</p>
+<p class="text-body-sm font-body-sm text-secondary" dir="ltr">010xxx</p>
+</div>
+</div>
+<span class="bg-[#25A987]/10 text-[#25A987] px-2 py-0.5 rounded text-caption font-caption font-semibold">تم التحقق</span>
+</div>
+<!-- SIM 2 -->
+<div class="flex items-center justify-between p-3 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold text-sm">2</div>
+<div>
+<p class="text-body-lg font-body-lg text-on-surface font-semibold">Orange</p>
+<p class="text-body-sm font-body-sm text-secondary" dir="ltr">012xxx</p>
+</div>
+</div>
+<span class="bg-[#25A987]/10 text-[#25A987] px-2 py-0.5 rounded text-caption font-caption font-semibold">تم التحقق</span>
+</div>
+</div>
+</section>
+<!-- Compact Wallet Cards Accordion -->
+<section class="flex flex-col gap-3" id="wallets-accordion">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">المحافظ المربوطة</h3>
+<!-- Wallet 1 -->
+<div class="bg-surface-container-lowest border border-[#E5E9F8] rounded-xl p-4 shadow-[0px_4px_20px_-2px_rgba(79,99,232,0.04)] flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-[#EEF1FF] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<div>
+<h4 class="text-body-lg font-body-lg text-on-surface font-semibold">فودافون كاش</h4>
+<p class="text-body-sm font-body-sm text-secondary">الرقم: 01012345678</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-2 border-t border-[#E5E9F8]">
+<div class="flex flex-col">
+<span class="text-body-sm text-secondary">الرصيد الافتتاحي</span>
+<span class="text-label-numeric text-on-surface">5,000 ج.م</span>
+</div>
+<div class="flex flex-col">
+<span class="text-body-sm text-secondary">عمولة الكاشير الافتراضية</span>
+<span class="text-label-numeric text-primary">1%</span>
+</div>
+</div>
+</div>
+<!-- Wallet 2 -->
+<div class="bg-surface-container-lowest border border-[#E5E9F8] rounded-xl p-4 shadow-[0px_4px_20px_-2px_rgba(79,99,232,0.04)] flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-[#EEF1FF] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<div>
+<h4 class="text-body-lg font-body-lg text-on-surface font-semibold">أورنج كاش</h4>
+<p class="text-body-sm font-body-sm text-secondary">الرقم: 01212345678</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-2 border-t border-[#E5E9F8]">
+<div class="flex flex-col">
+<span class="text-body-sm text-secondary">الرصيد الافتتاحي</span>
+<span class="text-label-numeric text-on-surface">3,200 ج.م</span>
+</div>
+<div class="flex flex-col">
+<span class="text-body-sm text-secondary">عمولة الكاشير الافتراضية</span>
+<span class="text-label-numeric text-primary">1%</span>
+</div>
+</div>
+</div>
+<!-- Wallet 3 -->
+<div class="bg-surface-container-lowest border border-[#E5E9F8] rounded-xl p-4 shadow-[0px_4px_20px_-2px_rgba(79,99,232,0.04)] flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-[#EEF1FF] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div>
+<h4 class="text-body-lg font-body-lg text-on-surface font-semibold">إنستاباي (InstaPay)</h4>
+<p class="text-body-sm font-body-sm text-secondary">مربوط بحساب بنكي</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-2 border-t border-[#E5E9F8]">
+<div class="flex flex-col">
+<span class="text-body-sm text-secondary">الرصيد الافتتاحي</span>
+<span class="text-label-numeric text-on-surface">12,000 ج.م</span>
+</div>
+<div class="flex flex-col">
+<span class="text-body-sm text-secondary">الحالة</span>
+<span class="text-label-numeric text-[#25A987]">متصل</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Add Custom Wallet Button -->
+<button class="w-full h-[52px] bg-[#EEF1FF] text-primary rounded-[20px] font-body-lg font-semibold flex items-center justify-center gap-2 hover:bg-[#dfe5ff] transition-colors active:scale-95">
+<span class="material-symbols-outlined">add</span>
+<span>إضافة محفظة أخرى</span>
+</button>
+<!-- Primary Finish Button -->
+<div class="pt-4">
+<button class="w-full h-[52px] bg-[#4F63E8] text-white rounded-[20px] font-body-lg font-semibold flex items-center justify-center shadow-[0px_4px_20px_-2px_rgba(79,99,232,0.2)] hover:bg-[#3D50D1] transition-all active:scale-95">
+          إتمام التهيئة وفتح دفتر المحافظ
+        </button>
+</div>
+</main>
+</div>
+</body></html>

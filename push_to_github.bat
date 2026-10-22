@@ -3,7 +3,7 @@ chcp 65001 >nul
 title HomeCash - Push to GitHub
 
 echo ======================================================
-echo          HomeCash - Git Push to GitHub
+echo          HomeCash - رفع التحديثات إلى GitHub
 echo ======================================================
 echo.
 
@@ -33,42 +33,45 @@ git remote add origin %REPO_URL%
 
 :STAGE_FILES
 git branch -M main
-echo [*] Adding files to git...
+echo [*] تتبع الملفات الجديدة والمعدلة (git add .)...
 git add .
 
 echo.
 set COMMIT_MSG=
-set /p COMMIT_MSG="Enter commit message (or press Enter for default): "
+set /p COMMIT_MSG="اكتب وصف التعديل (أو اضغط Enter لرسالة تلقائية): "
 if "%COMMIT_MSG%"=="" set COMMIT_MSG=Update HomeCash project
 
-echo [*] Committing changes...
+echo [*] جاري حفظ التعديل (git commit)...
 git commit -m "%COMMIT_MSG%"
 
 echo.
-echo [*] Pushing to GitHub (origin main)...
-git push -u origin main
+echo [*] جاري سحب أي تحديثات جديدة من GitHub قبل الرفع...
+git pull origin main --no-rebase --no-edit >nul 2>nul
+
+echo.
+echo [*] جاري الرفع إلى GitHub (origin main)...
+git push origin main
 
 if errorlevel 1 goto PUSH_FAILED
 
 echo.
 echo ======================================================
-echo             SUCCESSFULLY PUSHED TO GITHUB!
+echo          تم رفع المشروع بنجاح إلى GitHub!
+echo   https://github.com/ismailgoda0/App_Haseb
 echo ======================================================
 goto END
 
 :PUSH_FAILED
 echo.
 echo ======================================================
-echo [NOTE] Push failed. Possible reasons:
-echo 1. You may need to authenticate with your GitHub account.
-echo 2. If remote repository already has files (README, etc.),
-echo    run: git pull origin main --allow-unrelated-histories
+echo [تنبيه] حدث خطأ أثناء الرفع!
+echo تأكد من اتصال الإنترنت وصلاحيات حسابك على GitHub.
 echo ======================================================
 goto END
 
 :NO_GIT
-echo [ERROR] Git is not installed or not in your PATH.
-echo Please install Git from: https://git-scm.com/
+echo [خطأ] بروتوكول Git غير مثبت على جهازك أو غير مضاف إلى PATH.
+echo يرجى تحميله من: https://git-scm.com/
 goto END
 
 :END
